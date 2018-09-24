@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  db:
+    image: postgres:latest
+    environment:
+      - PGPASSWORD=fashop777
+    volumes:
+      - .:/app
+
+  django:
+    build: ./server
+    tty: true
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./server:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+
+  node:
+    build: ./client
+    command: yarn start --host 0.0.0.0 --port 3000
+    volumes:
+      - ./client:/app
+    ports:
+      - 3000:3000
+

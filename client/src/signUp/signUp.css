@@ -1,0 +1,19 @@
+.SignUp {
+  text-align: center;
+}
+
+.SignUp-header {
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
+  color: white;
+}
+
+.SignUp-title {
+  margin: 1em;
+  font-size: 1.5em;
+}
+
+.SignUp-intro {
+  font-size: large;
+}
