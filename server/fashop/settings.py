@@ -29,6 +29,11 @@ AUTH_USER_MODEL = 'accounts.User'
 
 ALLOWED_HOSTS = ['localhost', 'django', '104.248.192.233', ]
 
+# graphene
+GRAPHENE = {
+    'SCHEMA': 'products.schema.schema'
+}
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # graphene
+    'graphene_django',
 
     # local
     'accounts',

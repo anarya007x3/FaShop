@@ -12,7 +12,11 @@ class Product(models.Model):
         blank=True,
     )
     is_active = models.BooleanField(_('active'), default=True)
-    image = models.ImageField(upload_to='products/product_{self.id}/')
+    image = models.ImageField(
+        upload_to='products/product_{self.id}/',
+        blank=True,
+        null=True,
+    )
     price = models.DecimalField(
         _('price'),
         max_digits=15,
