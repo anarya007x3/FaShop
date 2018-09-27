@@ -10,6 +10,7 @@ from .managers import UserManager
 
 # Create your models here.
 
+
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email address'), unique=True)
     first_name = models.CharField(_('first name'), max_length=30, blank=True)

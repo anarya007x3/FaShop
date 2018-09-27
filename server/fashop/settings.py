@@ -27,7 +27,7 @@ DEBUG = True
 
 AUTH_USER_MODEL = 'accounts.User'
 
-ALLOWED_HOSTS = ['localhost', 'django']
+ALLOWED_HOSTS = ['localhost', 'django', '104.248.192.233', ]
 
 # Application definition
 
