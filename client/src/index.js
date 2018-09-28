@@ -1,8 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import SignUp from './signUp/signUp';
+// bootstrap_v3
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
+
+import 'styles/index.scss';
+import Header from 'components/Header';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<SignUp />, document.getElementById('root'));
+
+ReactDOM.render(<Header />, document.getElementById('root'));
 registerServiceWorker();

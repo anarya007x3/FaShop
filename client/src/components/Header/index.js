@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Navbar } from 'react-bootstrap';
+import logo from 'images/logo.svg';
+import 'styles/Header.scss';
 
-class App extends Component {
+class Header extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <Navbar className="Header">
+        <header className="Header-header">
+          <h1 className="Header-title">FaShop</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div></div>
+      </Navbar>
     );
   }
 }
 
-export default App;
+export default Header;
