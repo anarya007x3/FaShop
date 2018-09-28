@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// bootstrap_v3
+// bootstrap_v4
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 
 import 'styles/index.scss';
 import Header from 'components/Header';

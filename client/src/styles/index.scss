@@ -1,9 +1,11 @@
 $background-color: #fff;
 $font-family: sans-serif;
+$font-size: 18px;
 
 body {
   margin: 0;
   padding: 0;
+  font-size: $font-size;
   background-color: $background-color;
   font-family:$font-family;
 }
