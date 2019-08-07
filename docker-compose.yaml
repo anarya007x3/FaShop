@@ -2,27 +2,31 @@ version: '3.3'
 services:
   db:
     image: postgres:latest
-    environment:
-      - PGPASSWORD=fashop777
+    env_file:
+      - .env
     volumes:
-      - .:/app
+      - .:/server
 
   django:
     build: ./server
     tty: true
-    command: python manage.py runserver 0.0.0.0:8000
+    command: invoke run
+    env_file:
+      - .env
     volumes:
-      - ./server:/app
+      - ./server:/server
+    working_dir: /server
     ports:
-      - 8000:8000
+      - 9000:9000
     depends_on:
       - db
 
-  node:
-    build: ./client
-    command: yarn start --host 0.0.0.0 --port 3000
+  react:
+    image: node:10.15.0
     volumes:
-      - ./client:/app
+      - ./client:/client
+    working_dir: /client
     ports:
       - 3000:3000
+    command: /bin/bash -c "npm install && npm start"
 

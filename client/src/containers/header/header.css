@@ -1,0 +1,22 @@
+.header-container {
+  text-align: center;
+}
+
+.main-header {
+  background-color: #204969;
+  height: 70px;
+  padding: 0px 20%;
+  color: white;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+}
+
+.header-title {
+  align-self: center;
+  display: inline-flex;
+}
+
+.header-intro {
+  font-size: large;
+}

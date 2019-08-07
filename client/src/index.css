@@ -2,4 +2,32 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: var(--background-base);
+}
+
+:root {
+  --white: #ffffff;
+  --base: #204969;
+  --background-base: #f5f5f5;
+  --black: #3a3f45;
+  --gray0: #f8f9fa;
+  --gray1: #ebedef;
+  --gray2: #dde1e4;
+  --gray3: #cdd3d8;
+  --gray4: #bcc4cb;
+  --gray5: #aab4bd;
+  --gray6: #94a1ac;
+  --gray7: #7d8a96;
+  --gray8: #636d76;
+  --gray9: #3a3f45;
+  --blue0: #e8f2fc;
+  --blue1: #cfe5fa;
+  --blue2: #b3d6f7;
+  --blue3: #4fb4f2;
+  --blue4: #6db1f1;
+  --blue5: #3e98ed;
+  --blue6: #3889d6;
+  --blue7: #3178bb;
+  --blue8: #28639b;
+  --blue9: #1c476e;
 }

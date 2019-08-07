@@ -1,0 +1,36 @@
+
+.button-container {
+  margin: 5px;
+  text-align: center;
+}
+
+.button-style {
+  text-align: center;
+  border: 2px solid var(--base);
+  color: var(--base);
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px var(--gray3);
+
+}
+
+.button-style:active {
+  box-shadow: 0;
+  transform: translateY(2px);
+}
+
+.button-style:hover {
+  background-color: var(--base);
+  color: white;
+}
+
+.button-title {
+  margin: 0.5em;
+  font-size: 1em;
+
+}

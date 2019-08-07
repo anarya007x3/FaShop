@@ -29,11 +29,6 @@ AUTH_USER_MODEL = 'accounts.User'
 
 ALLOWED_HOSTS = ['localhost', 'django', '104.248.192.233', ]
 
-# graphene
-GRAPHENE = {
-    'SCHEMA': 'products.schema.schema'
-}
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,9 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # graphene
-    'graphene_django',
 
     # local
     'accounts',
@@ -83,8 +75,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'fashop.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
@@ -92,11 +82,11 @@ WSGI_APPLICATION = 'fashop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'fashop',
-        'USER': 'fashop',
-        'PASSWORD': 'fashop1234',
-        'HOST': 'db',
-        'PORT': '5432',
+        'NAME': os.getenv('DB_NAME', 'fashop'),
+        'USER': os.getenv('DB_USERNAME', 'fashop'),
+        'PASSWORD': os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('DB_HOST', 'db'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     },
 }
 
@@ -144,3 +134,4 @@ CORS_ORIGIN_WHITELIST = (
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/static'
