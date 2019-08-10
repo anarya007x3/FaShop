@@ -1,0 +1,15 @@
+.content {
+  background: var(--white);
+}
+.product-modal-view-img-container {
+  display: inline-flex;
+  width: 100%;
+}
+
+.product-modal-view-img-container img {
+  width: 100%;
+}
+
+.product-modal-info-container {
+
+}

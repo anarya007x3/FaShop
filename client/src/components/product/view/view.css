@@ -1,0 +1,15 @@
+.product-view-container {
+  background: var(--white);
+}
+.product-view-img-container {
+  display: inline-flex;
+  width: 100%;
+}
+
+.product-view-img-container img {
+  width: 100%;
+}
+
+.product-view-info-container {
+
+}

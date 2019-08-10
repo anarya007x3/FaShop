@@ -13,6 +13,11 @@ class ProductList extends Component {
     };
   }
 
+  openProductInfoPage(product) {
+    console.log("Product item click:");
+    console.log(product.title);
+  }
+
   componentWillMount() {
     for (let i = 0; i < 5; i++) {
       const product = {
@@ -33,7 +38,9 @@ class ProductList extends Component {
     return (
 
       <div className="product-list-container">
-        {products.map((product, index) => (<ProductItem key={index} product={product}/>))}
+        {products.map((product, index) => (
+          <ProductItem key={index} product={product} onProductItemClick={this.openProductInfoPage}/>
+          ))}
       </div>
     );
   }

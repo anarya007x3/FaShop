@@ -26,3 +26,5 @@
 *.log
 *.sql
 *.sqlite
+.env
+.idea/*
