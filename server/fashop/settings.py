@@ -126,12 +126,17 @@ USE_TZ = True
 # Cors settings
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:8000',
+    'localhost:9000',
     'localhost:3000',
 )
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+REPOSITORY_ROOT = os.path.dirname(BASE_DIR)
+
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static'
+STATIC_ROOT = os.path.join(REPOSITORY_ROOT, 'static/')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(REPOSITORY_ROOT, 'media/')

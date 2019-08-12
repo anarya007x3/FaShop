@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import styles from './view.css';
+import IconBackArrow from '../../../svg/icons';
 import Modal from 'react-modal';
 import DefaultButton from "../../product/item/item";
+import {Link} from "react-router-dom";
 
 Modal.setAppElement('#root');
 
@@ -10,16 +12,20 @@ class ProductView extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      product: null,
+    };
   }
-
-
   render() {
-    const { product } = this.props;
+    const { product } = this.props.location.state;
     return (
-        <div className={"product-view-container"}>
-          <h2>{ product.title }</h2>
-          <button onClick={this.closeModal}>Back</button>
+        product ? (<div className={"product-view-container"}>
+          <div className={"product-view-top-container"}>
+            <Link className={"icon-back-arrow-link"} to={"/products"}>
+              <IconBackArrow/>
+            </Link>
+            <h1>{ product.title }</h1>
+          </div>
           <div className={"product-view-img-container"}>
            <img src={product['image']} alt="Avatar"/>
           </div>
@@ -31,6 +37,9 @@ class ProductView extends Component {
              </div>
            </div>
         </div>
+        ) : (
+          <h2>Loading...</h2>
+        )
     );
   }
 }

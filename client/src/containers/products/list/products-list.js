@@ -6,9 +6,7 @@ import ProductList from "../../../components/product/list/list";
 class ProductsList extends Component {
   render() {
     return (
-      <div className="main-container">
         <ProductList/>
-      </div>
     );
   }
 }

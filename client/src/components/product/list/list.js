@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './list.css';
 import Faker from 'faker';
 import ProductItem from "./../../product/item/item"
+import { Link } from 'react-router-dom'
 
 
 class ProductList extends Component {
@@ -21,6 +22,7 @@ class ProductList extends Component {
   componentWillMount() {
     for (let i = 0; i < 5; i++) {
       const product = {
+        id: Faker.random.number(),
         title: Faker.lorem.sentence(),
         image: Faker.image.technics(),
         description: Faker.lorem.sentences(),
@@ -39,7 +41,7 @@ class ProductList extends Component {
 
       <div className="product-list-container">
         {products.map((product, index) => (
-          <ProductItem key={index} product={product} onProductItemClick={this.openProductInfoPage}/>
+            <ProductItem key={index} product={product}/>
           ))}
       </div>
     );

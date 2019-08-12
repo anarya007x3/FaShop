@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './item.css';
 import DefaultButton from "./../../buttons/default-button/button"
 import ProductModal from "../../modals/productModal/modal"
+import {Link} from "react-router-dom";
 
 
 class ProductItem extends Component {
@@ -31,19 +32,26 @@ class ProductItem extends Component {
     this.setState({modalIsOpen: false});
   }
 
-  onProductItemClick(func, item) {
-    func(item);
-    this.openModal();
+  onProductItemClick() {
+    // func(item);
+    // this.openModal();
   }
 
   render() {
-    const { modalIsOpen } = this.state;
-    const { product, onProductItemClick } = this.props;
+    const { product } = this.props;
     return (
-      product ? (<div onClick={() => {this.onProductItemClick(onProductItemClick, product)}} className="product-item-container">
-        <ProductModal product={product} modalIsOpen={modalIsOpen}/>
-
-        <img src={product['image']} alt="Avatar"/>
+      product ? (<div onClick={() => {this.onProductItemClick()}} className="product-item-container">
+        <div className={"product-image-link-container"}>
+          <Link to={{
+            pathname: "product/" + product.id,
+            state: {
+              product: product
+            }
+          }}
+          className={"product-link-item"}>
+            <img src={product['image']} alt="Avatar"/>
+          </Link>
+        </div>
         <div className={"product-info-container"}>
           <h3> {product.title} </h3>
           <span> {product.description} </span>
