@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from './view.css';
 import IconBackArrow from '../../../svg/icons';
 import Modal from 'react-modal';
-import DefaultButton from "../../product/item/item";
+import DefaultButton from "./../../buttons/default-button/button";
 import {Link} from "react-router-dom";
 
 Modal.setAppElement('#root');
@@ -26,17 +26,27 @@ class ProductView extends Component {
             </Link>
             <h1>{ product.title }</h1>
           </div>
-          <div className={"product-view-img-container"}>
-           <img src={product['image']} alt="Avatar"/>
+          <div className={"product-view-middle-container"}>
+            <div className={"product-view-img-container"}>
+              <img src={product['image']} alt="Avatar"/>
+            </div>
+            <div className={"product-view-info-container"}>
+              <div className={"product-view-info-desc-container"}>
+                <h4>Description</h4>
+                <span> {product.description} </span>
+              </div>
+              <div className={"product-view-info-bottom-container"}>
+                <div className={"product-view-info-price-container"}>
+                  <span> {product.price}{" ₴"} </span>
+                </div>
+                <div className="product-view-button-container">
+                  <DefaultButton value={'Get one'}/>
+                </div>
+              </div>
+            </div>
           </div>
-           <div className={"product-view-info-container"}>
-             <span> {product.description} </span>
-             <span> {"Price: "} {product.price} </span>
-             <div className="product-view-button-container">
-               <DefaultButton value={'Get one'}/>
-             </div>
-           </div>
-        </div>
+       </div>
+
         ) : (
           <h2>Loading...</h2>
         )

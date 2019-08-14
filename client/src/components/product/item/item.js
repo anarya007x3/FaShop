@@ -55,10 +55,13 @@ class ProductItem extends Component {
         <div className={"product-info-container"}>
           <h3> {product.title} </h3>
           <span> {product.description} </span>
-          <span> {"Price: "} {product.price} </span>
-
-          <div className="product-button-container">
-            <DefaultButton value={'Get one'}/>
+          <div className={"product-view-info-bottom-container"}>
+            <div className={"product-view-info-price-container"}>
+              <span> {product.price}{" ₴"} </span>
+            </div>
+            <div className="product-view-button-container">
+              <DefaultButton value={'Get one'}/>
+            </div>
           </div>
         </div>
       </div>) : null

@@ -5,13 +5,14 @@
 }
 
 .button-style {
+  width: 100%;
   text-align: center;
   border: 2px solid var(--base);
   color: var(--base);
   padding: 10px 20px;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   background-color: transparent;
   cursor: pointer;
   border-radius: 8px;

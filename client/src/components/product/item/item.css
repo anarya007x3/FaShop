@@ -36,12 +36,13 @@
 }
 
 .product-info-container span{
-
+  width: 100%;
+  text-align: justify;
 }
 
 .product-button-container{
   align-self: flex-end;
-  width: 100%;
+  width: 30%;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -57,4 +58,10 @@
 .product-link-item {
   text-decoration: none;
   color: black;
+}
+
+.product-view-info-bottom-container{
+  display: flex;
+  align-items: center;
+  width: 70%;
 }
