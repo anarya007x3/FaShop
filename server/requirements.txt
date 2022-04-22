@@ -53,7 +53,7 @@ py==1.5.3
 pycparser==2.18
 Pygments==2.2.0
 PyJWT==1.5.3
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pytest==3.5.1
 pytest-cov==2.5.1
 pytest-django==3.2.1
